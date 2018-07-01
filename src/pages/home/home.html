@@ -1,14 +1,37 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div id="r-3">Strictly for Medical Use Only</div>
+  <div id="r-1">RATE MY WEED</div>
+  <div style="align:center" text-center>
+     <img src="assets/imgs/log.png" id="log-img"/>
+  </div>
+  <div id="r-4">
+      Marijuana Recognition Software
+  </div>
+  <div>
+    <hr/>
+  </div>
+  <div id="r-2">
+    Share your results:
+  </div>
+  <div>
+    <button ion-button outline block>Twitter</button>
+    <button ion-button outline block>Facebook</button>
+  </div>
+
+  <ion-footer>
+
+      <button id="footer-btn" ion-button block round icon-start (click)="takeAPhoto()">
+        <ion-icon name="camera" ></ion-icon>
+        Take a Photo
+      </button>
+  </ion-footer>
+
 </ion-content>

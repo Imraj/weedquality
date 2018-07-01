@@ -1,0 +1,20 @@
+<ion-content padding>
+  <div id="r-3">Strictly for Medical Use Only</div>
+  <div id="r-1">RATE MY WEED</div>
+  <div style="align:center" text-center>
+     <img src="assets/imgs/log.png" id="log-img"/>
+  </div>
+  <div style="align:center" text-center>
+     <img [src]="imageData" height="300" width="300"/>
+  </div>
+
+  <hr/>
+  <ion-footer>
+
+      <button id="footer-btn" ion-button block round icon-start (click)="takeAPhoto()">
+        <ion-icon name="camera"></ion-icon>
+        Take another Photo
+      </button>
+  </ion-footer>
+
+</ion-content>

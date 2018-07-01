@@ -1,0 +1,19 @@
+page-camera {
+  ion-content{
+     background-color: transparent !important;
+  }
+  .content-bg{
+    background-color: transparent;
+  }
+  .image-container{
+    width:100vw;
+    height:55vh;
+    background-color: transparent;
+  }
+  ion-footer{
+    margin-bottom: 5px;
+  }
+  #btn-1,#btn-2{
+    height:3em;
+  }
+}
