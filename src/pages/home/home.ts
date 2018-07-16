@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { Camera, CameraOptions } from "@ionic-native/camera";
-
 
 import { CameraPage } from "../camera/camera"
 
@@ -12,7 +10,7 @@ import { CameraPage } from "../camera/camera"
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController,private camera: Camera) {
+  constructor(public navCtrl: NavController) {
 
   }
 

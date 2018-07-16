@@ -13,6 +13,21 @@ import { Camera } from "@ionic-native/camera";
 import { CameraPreview } from "@ionic-native/camera-preview";
 import { HTTP } from '@ionic-native/http';
 import { HttpModule } from '@angular/http';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+
+import { Ionic2RatingModule } from 'ionic2-rating';
+
+const firebase = {
+   apiKey: "AIzaSyAQKaQTM90b2EdTWA8espFqOxzBH3OFCYA",
+   authDomain: "medexp-af084.firebaseapp.com",
+   databaseURL: "https://medexp-af084.firebaseio.com",
+   projectId: "medexp-af084",
+   storageBucket: "medexp-af084.appspot.com",
+   messagingSenderId: "1022610148422"
+}
+
 @NgModule({
   declarations: [
     MyApp,
@@ -23,7 +38,10 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(firebase),
+    AngularFireStorageModule,
+    Ionic2RatingModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

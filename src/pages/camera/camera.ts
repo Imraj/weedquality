@@ -1,21 +1,16 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { CameraPreview,CameraPreviewOptions,CameraPreviewPictureOptions } from '@ionic-native/camera-preview';
+import { CameraPreview,CameraPreviewOptions } from '@ionic-native/camera-preview';
 
 import { ResultPage } from "../result/result"
+import { ProcessPage } from "../process/process"
 /**
  * Generated class for the CameraPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
- const pictureOpts: CameraPreviewPictureOptions = {
-   width: 1280,
-   height: 1280,
-   quality: 85
- }
 
 @IonicPage()
 @Component({
@@ -63,18 +58,20 @@ export class CameraPage {
           app.cameraPreview.stopCamera();
           app.picture = 'data:image/jpeg;base64,' + imageData;
           app.navCtrl.push(ResultPage,{
-            image:app.picture
+            image:app.picture,
+            rawData:imageData
           })
         }, (err) => {
           console.log(err);
           app.picture = 'assets/img/test.jpg';
         });
-      },10000)
-    //
+      },4000)
+
     // this.cameraPreview.setOnPictureTakenHandler().subscribe((result) => {
     //   console.log(result);
     //   this.navCtrl.push(ResultPage)
     // });
+
   }
 
 }
